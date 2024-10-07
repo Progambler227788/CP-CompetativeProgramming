@@ -1,0 +1,53 @@
+
+1 + 3 + 6 == 10
+
+
+
+3 is mine cost.
+ai to others , element 
+cost -> bi
+
+
+3, cost
+Minimum cost
+2 3 2 1 1 3 -> ai elements
+4 3 2 6 3 6 -> bi costs
+
+2 3 1 2 1 1
+2 3 3 4 6 6 -> Costs
+
+3+2+2 -> 7,,,,2,3,1
+38
+
+Let say cost is 3
+0,1,2,3,4,5
+10
+2 3 1 2 1 1
+2 3 3 4 6 6 -> Costs
+Let say cost is 2
+count = 3
+2 dyga -> 1,3 ko..  2+2+2 -> 6+6 == 12
+
+
+
+
+
+Cost Tooking -> 4, 2
+Cost Tooking -> 9, 3
+Cost Tooking -> 3, 1
+Cost Tooking -> 8, 2
+Cost Tooking -> 6, 1
+Cost Tooking -> 6, 1
+Disributed to 2 -> 3 cost taken
+Now 2 Distributes to -> 3, 1..  -> 2+2 = 4 cost
+Now 3 distributes to -> 4,6,6.. -> 3*3 = 9
+
+
+k is 30
+if number of elements <=30 and min(array)> k, sum of k -> n times
+3  2   4  1
+57 86 96 103
+
+3+4 == 7
+
+

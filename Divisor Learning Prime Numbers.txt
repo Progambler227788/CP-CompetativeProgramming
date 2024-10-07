@@ -1,0 +1,1 @@
+Every number has smallest divisor as prime number

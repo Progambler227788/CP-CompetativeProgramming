@@ -1,0 +1,31 @@
+Raspberries Concept:
+K=5 
+Numbers are 7,3 so we increased 3 to 5 by 2 times 
+
+K=3 -> 30,33,36,39,42,45,48,51
+7 4 1 -> 9 * 4 -> 36.. 
+K = 2
+9 7 7 3 9
+
+if k divise any number in array then whole product of array is divisible by k
+
+
+A number is divisible by 4 if it contains at least two factors of 2 (i.e., 
+2
+2
+2 
+2
+ ).
+Since 4 is 
+2
+2
+2 
+2
+  and 8 is 
+2
+3
+2 
+3
+ , both 4 and 8 already have enough factors of 2 to ensure that the product of the numbers in the array is divisible by 4.
+
+One even number and if there

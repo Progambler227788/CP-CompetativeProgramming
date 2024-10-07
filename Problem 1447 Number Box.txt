@@ -1,0 +1,30 @@
+0 -1 -2 -3
+-1 -2 -3 -4
+-2 -3 -4 -5
+
+0 -1 2 3
+-1 -2 3 4
+-2 -3 4 5
+
+0 1 2 3 == 6
+1 2 3 4 == 10
+2 3 4 5 == 14
+
+totalSum = 30
+
+0 1 -2 -3
+
+1
+
+-2
+
+-3
+
+1 -1 
+1  1
+
+Possible Cases:
+if both are having same signs, then they will become positive -> -1,-2... 1,2 -> 1,2 ans
+if both are of different signs, then they will become opposite signs -> 1,-2... -2,1 viceversa
+if one of them is zero, then second one will be zero -> 0,-3 -> 0,3
+

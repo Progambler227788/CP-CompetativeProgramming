@@ -1,0 +1,12 @@
+If there is missing element when we convert array to binary tree then that is not a complete binary tree
+
+At each level nodes are, 2^h+1 - 1, like if h is 0 then 2^1 - 1 that is 1 at first level
+
+In a complete binary tree, there should not be gaps when we convert it into array
+
+We will not go to next level until it is filled.
+
+like   1
+   2      3
+
+1 then 2 then 3, not 1 3 2, so like that

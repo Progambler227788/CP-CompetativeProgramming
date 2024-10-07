@@ -1,0 +1,44 @@
+The formulas you provided are related to number theory and involve the properties of divisors, the greatest common divisor (GCD), and prime factorization. Here's a breakdown of these cases and their significance, along with additional related concepts.
+
+### 1. **Case: `b % a = 0`**
+
+When \( b \) is divisible by \( a \), this implies that \( a \) is a factor of \( b \). 
+
+- **Formula**: \( b = a \cdot p \), where \( p \) is the smallest prime factor of \( x \).
+- **Explanation**: Here, \( b \) can be expressed as \( a \) times some integer \( p \). In this case, \( p \) is a factor that, when multiplied by \( a \), gives \( b \). This is useful when dealing with problems where you need to express numbers in terms of their prime factors.
+
+### 2. **Case: `b % a ≠ 0`**
+
+When \( b \) is not divisible by \( a \), we can use the fact that \( a \) and \( b \) share common factors.
+
+- **Formula**: \( b = x^p \) and \( a = x^q \), where \( p \) and \( q \) are the smallest prime factors of \( x \).
+- **GCD Calculation**: The greatest common divisor (GCD) of \( a \) and \( b \) is given by \( x^p \cdot q \), where \( p \) and \( q \) are the prime factors of \( x \). Then, \( x = b \cdot p / \text{gcd}(a, b) \).
+- **Explanation**: Here, \( b \) and \( a \) are expressed in terms of their smallest prime factors. By computing the GCD of \( a \) and \( b \), you can determine how \( b \) can be represented in terms of \( a \) and its prime factors. This is useful in finding common factors and simplifying expressions involving multiple variables.
+
+### Additional Related Formulas and Concepts
+
+1. **Prime Factorization**:
+   - **Formula**: Any integer \( n \) can be expressed as \( n = p_1^{e_1} \cdot p_2^{e_2} \cdot \ldots \cdot p_k^{e_k} \), where \( p_i \) are prime factors and \( e_i \) are their exponents.
+   - **Usage**: Helps in simplifying expressions, finding GCD, and solving problems involving divisors.
+
+2. **Greatest Common Divisor (GCD)**:
+   - **Formula**: \( \text{gcd}(a, b) = \text{max}(d) \) where \( d \) divides both \( a \) and \( b \).
+   - **Algorithm**: Euclidean Algorithm is often used to compute GCD efficiently.
+
+3. **Least Common Multiple (LCM)**:
+   - **Formula**: \( \text{lcm}(a, b) = \frac{|a \cdot b|}{\text{gcd}(a, b)} \).
+   - **Usage**: Used to find common multiples and solve problems involving periodic events.
+
+4. **Modular Arithmetic**:
+   - **Formula**: \( a \equiv b \pmod{m} \) means \( a \) and \( b \) leave the same remainder when divided by \( m \).
+   - **Usage**: Useful in problems related to congruences, cryptography, and number theory.
+
+5. **Chinese Remainder Theorem**:
+   - **Formula**: If \( m_1 \) and \( m_2 \) are coprime, then there exists a unique \( x \) modulo \( m_1 \cdot m_2 \) such that \( x \) satisfies given congruences.
+   - **Usage**: Solves systems of congruences and is used in various computational problems.
+
+6. **Euler’s Totient Function**:
+   - **Formula**: \( \phi(n) \) counts the number of integers up to \( n \) that are relatively prime to \( n \).
+   - **Usage**: Useful in number theory and cryptographic algorithms.
+
+These formulas and concepts are foundational in number theory and are widely used in solving mathematical problems and algorithm design.

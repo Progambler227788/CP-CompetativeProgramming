@@ -1,0 +1,18 @@
+1 by 1, 2 by 1, 1 by 2, 3 by 1, 1 by 3 --> 1 base case like there n is 1 or either m is 1
+2 by 2 -> 2
+2 by 3 -> 3
+3 by 2 -> 3
+3 by 3 -> 6
+
+4 by 4 -> (3,4) + (4,3)
+
+def takeGrid(n,m):
+    if n == 1 or m == 1:
+        return 1
+    return takeGrid(n-1,m) + takeGrid(n,m-1)
+
+
+
+print(takeGrid(  2,3 )) # -> 2,2 -> 1,2 + 2,1
+print(takeGrid(  3,3 ))
+print(takeGrid(  4,4 ))

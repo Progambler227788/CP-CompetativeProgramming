@@ -1,0 +1,7 @@
+Peak Element
+
+1,2,3,1
+
+left = mid + 1
+right = mid - 1
+

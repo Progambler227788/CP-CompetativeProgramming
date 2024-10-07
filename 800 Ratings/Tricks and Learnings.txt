@@ -1,0 +1,62 @@
+By sorting we can compare first and last elements to check if array has same elements.
+Even Odd comparison.
+GCD of two even elements is atleast 2
+GCD of two consective odd elements is 1
+Sum of elements.
+Pair of Primes can be sometimes answer
+Minimum, Maximum
+Power of two numbers formulas
+a+b = c
+Summation of (ai) == K
+B divides A, smallest number will not be divided by big number.
+Same Numbers, Unique Numbers
+Pair by Pair comparison
+Mod Operator 
+Two Even Elements or ODD elements always sums upto Even number
+Pair of even and odd always give odd number
+Works for desorting array by finding smallest difference and then using smallestDiff//2 + 1
+XOR:
+A⊕0=A, A⊕A=0, A⊕B=B⊕A, Commutative and Associatative
+Let say we want to find x from array by taking xor ,then element is xor of all elements in array in case of odd length
+XOR of elements is 0 then any element taking XOR with Zero will be element
+For even length XOR if no zero then taking xor with x as zero not possible
+
+Extreme Round Digits have only 1 non-zero digit
+Power Function:
+def takeP(a,b):
+    res = 1
+    while b > 0 :
+        if b %2!=0:
+            res = (res * a) % MOD
+        a = (a * a) % MOD
+        b//=2 
+    return res
+// also takes role , polygon has 3,4,5,6,8 sides. 3//3 -> 1, 4//4 ->, 3 sides makes 1 polygon similarly other for 4
+
+Do precomputation
+
+If Array has only 1,-1,, then see n//2.  negatives - n//2 , if n//2 is odd then (negatives - n//2 ) + 1 else same negatives - n//2 
+because even pa 1,-1 brabar or sum zero hugye ga islye. Check middle for even/odd
+
+Comparison of two points using abs function
+
+import sys
+sys.stdout = open('output.txt','w')  
+sys.stdin = open('input.txt','r')
+
+Adjacent by side -> rows/columns
+Adjacent by corners -> diagonals
+
+A number is divisible by 25
+ if and only if its last two digits represent one of the following strings: "00", "25", "50", "75".
+Even + Even is Even, but odd + even is odd so for total sum need to be even we need to have odd elements count even. 1 + 3 == 4
+
+To make a number exactly 0 by dividing by k and tell how many operations took we use  count = count + number % k
+for counting minimum number of operations
+
+When you select three unique digits, two digits are odd atleast 10 20 30
+
+Suppose you have array want to maximize any element + any element //2 and then adding it in array then we can do that by sorting array
+and starting divide and storing results.
+
+MEX is minimum excluded value in array that is first excluded one
