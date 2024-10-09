@@ -15,19 +15,19 @@ def solve(n):
     count = 0
     maping = {}
     i = 1
-    increment = 1
-    while i<=n:
-        if extremeRound(i):
-            count+=1
-            print(i)
-        maping[i] = count
-        if i == n:
-           i*=1
+    # increment = 1
+    # while i<=n:
+    #     if extremeRound(i):
+    #         count+=1
+    #         print(i)
+    #     maping[i] = count
+    #     if i == n:
+    #        i*=1
           
     for i in range(1,n+1):
         if extremeRound(i):
             count+=1
-            print(i)
+            # print(i)
         maping[i] = count
 
     return maping
