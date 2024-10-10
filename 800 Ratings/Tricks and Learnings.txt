@@ -2,6 +2,7 @@ By sorting we can compare first and last elements to check if array has same ele
 Even Odd comparison.
 GCD of two even elements is atleast 2
 GCD of two consective odd elements is 1
+You can use previously stored items in dictionary for logic like for pair sum with on certain condition of uniques like adding only even pairs
 Sum of elements.
 Pair of Primes can be sometimes answer
 Minimum, Maximum
@@ -60,3 +61,6 @@ Suppose you have array want to maximize any element + any element //2 and then a
 and starting divide and storing results.
 
 MEX is minimum excluded value in array that is first excluded one
+
+
+Try to count pairs according to conditions either there is good array or beautiful array
