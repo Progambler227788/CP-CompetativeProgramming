@@ -7,8 +7,10 @@ Sum of elements.
 Pair of Primes can be sometimes answer
 Minimum, Maximum
 Power of two numbers formulas
+if arr[i-1] and arr[i+1] having effect on arr[i] then there will be something coincidence that others will also be effected
 a+b = c
 Summation of (ai) == K
+For Odd numbers -> 2*k + 1, like 11 is 2*5+1 -> can be as 2*(k-1) + 3.......Like 2*4 + 3
 B divides A, smallest number will not be divided by big number.
 Same Numbers, Unique Numbers
 Pair by Pair comparison
@@ -27,7 +29,7 @@ Power Function:
 def takeP(a,b):
     res = 1
     while b > 0 :
-        if b %2!=0:
+        if b & 1:
             res = (res * a) % MOD
         a = (a * a) % MOD
         b//=2 
