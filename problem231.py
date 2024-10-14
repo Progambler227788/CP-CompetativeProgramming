@@ -1,7 +1,7 @@
 def solve():
     count = 0
     for _ in range(int(input())):
-        x,y,z = 
+        x,y,z = map(int,input())
         temp = 0
         for in 
     
