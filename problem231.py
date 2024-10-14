@@ -1,2 +1,2 @@
-def solve(array):
+def solve():
     
