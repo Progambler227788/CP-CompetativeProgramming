@@ -1,6 +1,6 @@
 def solve():
-    n = int(input())
+    n = 
     count = 0
-    for 
+    for _ in range(int(input()))
     
     
