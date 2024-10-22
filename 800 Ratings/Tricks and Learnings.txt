@@ -1,5 +1,9 @@
 By sorting we can compare first and last elements to check if array has same elements.
 Even Odd comparison.
+
+Permutations -> No of ways, arrangement ,,, n! divided by (n-r)!
+Combinations can be of different size. AB and BA is same combination  n! divided by r! * (n-r)! 
+
 GCD of two even elements is atleast 2
 GCD of two consective odd elements is 1
 You can use previously stored items in dictionary for logic like for pair sum with on certain condition of uniques like adding only even pairs
