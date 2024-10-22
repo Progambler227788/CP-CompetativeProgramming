@@ -2,7 +2,16 @@ By sorting we can compare first and last elements to check if array has same ele
 Even Odd comparison.
 
 Permutations -> No of ways, arrangement ,,, n! divided by (n-r)!
-Combinations can be of different size. AB and BA is same combination  n! divided by r! * (n-r)! 
+Combinations can be of different size. AB and BA is same combination  n! divided by r! * (n-r)!
+
+A factorial is a function in mathematics with the symbol (!) that multiplies a number (n) by every number that precedes it
+Multiplication of elements inclusively from 1 to n where inclusiveness introduced boundary of numbers.
+
+Combination is the counting of selections that we make from n objects. Whereas Permutation is counting the number of arrangements from n objects. 
+
+ if we want to buy a milkshake and we are allowed to combine any 3 flavours from Apple, Banana, Cherry, and Durian, 
+then the combination of Apple, Banana, and Cherry is the same as the combination Banana, Apple, Cherry. 
+whereas in permutation these will be treated as unique.
 
 GCD of two even elements is atleast 2
 GCD of two consective odd elements is 1
