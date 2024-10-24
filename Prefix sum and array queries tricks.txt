@@ -1,0 +1,20 @@
+Array Techniques for queries:
+For example, we do
+q queries on an array like
+1,2,3,4 is array and then l=0, r=2, x= 3,, do +3 from 0 to 2nd index
+4,5,6,4, done 
+
+so we can do it in Big O(1).
+Add x to left array[left]+=x and subtract from array[right+1]-=x if within range.
+Then just do prefix sum. 
+1 2 3 4 5,, prefix sum is below
+1 3 6 10 15
+
+
+
+Another Technique:
+Shots fired from left will be cancelled out by shots fired from right
+Take xor at Left and Right+1
+array[left]^=x and array[Right+1]^=x
+
+Now after queries, similarly take Prefix xor of last array.
