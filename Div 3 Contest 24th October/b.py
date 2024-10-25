@@ -3,22 +3,27 @@
 # sys.stdin = open('input.txt','r')
 def solve(n,array):
     operations = 0
-    for m in range(n):
-       for i in range(0,n-1):
-        if array[i] == array[i+1]:
-            # print(i,i+1,n-i-1)
+    # check neighbours
+    
+    
+    for i in range(1, n):
+        # print(i)
+        if  array[n-i-1] != array[i]:
             fetch = array[n-i-1]
-            # print(n-i-1,i)
-            if fetch!= array[i]: # swap the elements
-             if n-i<n and n-i-2>=0 and n-i-2<n and array[i] == array[n-i] and array[i]==array[n-i-2]:
-                continue
-             array[i], array[n-i-1] = fetch, array[i]
-    # print(array)
+            
+            # before swap
+            # 1 1 2 2
+            # current is 2
+            # after is 0
+            current = int(array[i-1] == array[i]) + int(array[n-i-1] == array[n-i])
+            # after swap
+            after = int(array[i-1] == array[n-i-1]) + int(array[n-i-1] == array[i])
 
-    # 
+            if after < current:
+               array[i], array[n-i-1] = fetch, array[i]
+
     for i in range(0 , n-1 ):
-        if array[i] == array[i+1]:
-            operations+=1
+        operations+= int(array[i] == array[i+1])
     print(operations)
 
 for _ in range(int(input())):
@@ -27,4 +32,4 @@ for _ in range(int(input())):
     solve(n,array)
             
 
-# 1 1 1 1
+# 1 1 1 1 2 2 2 2
