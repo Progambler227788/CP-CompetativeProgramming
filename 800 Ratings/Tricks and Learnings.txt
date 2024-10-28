@@ -4,6 +4,8 @@ Even Odd comparison.
 Permutations -> No of ways, arrangement ,,, n! divided by (n-r)!
 Combinations can be of different size. AB and BA is same combination  n! divided by r! * (n-r)!
 
+Find patterns in numbers when divided by X and Y and having X and Y as digits. Finding pattern will help us to solve fast.
+
 A factorial is a function in mathematics with the symbol (!) that multiplies a number (n) by every number that precedes it
 Multiplication of elements inclusively from 1 to n where inclusiveness introduced boundary of numbers.
 
