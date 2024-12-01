@@ -5,6 +5,7 @@ def searchingArray(array,target,n):
     right = n
     while left +1 < right:
           mid = ( left  +  right) // 2
+          # no need to look at left side as we are finding element greater than target
           if array[mid] < target:
               left = mid
           else:

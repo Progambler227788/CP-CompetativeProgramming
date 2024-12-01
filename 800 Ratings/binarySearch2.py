@@ -7,7 +7,7 @@ def searchingArray(array,target,n):
           mid = ( left  +  right) // 2
           if array[mid] <= target:
               left = mid
-          else:
+          else: # if greater shrink to left
               right = mid
     return left+1 if left!=-1 else 0
 n,k = map(int,input().split())

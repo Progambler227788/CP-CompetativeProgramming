@@ -1,8 +1,35 @@
+If we need to find pairs of K adjacent elements < X or either > X, then keep on counting element
+  inside loop
+   if condition:
+      count +=1 
+    else:
+      pair += count//k # k is either 2 adjacent, 3 adjacent, 4 adjacent
+      count = 0 # for next pair
+# huskta h add hi krta jaye end tk so islye dubara huskta h pair mil gaye
+  pair += count//k
+example:
+Minimum number of days to make n boquets
+ for i in range(n):
+                if bloomDay[i]<=day:
+                    countAdj+=1
+                else:
+                    # add the pair of adjacent
+                    b += countAdj//k
+                    countAdj=0
+             b += countAdj//k
+
+Keep this in mind -> while left<right: when right = mid, left = mid+1
+
+  
+
 By sorting we can compare first and last elements to check if array has same elements.
 Even Odd comparison.
 
 Permutations -> No of ways, arrangement ,,, n! divided by (n-r)!
 Combinations can be of different size. AB and BA is same combination  n! divided by r! * (n-r)!
+The times you find index in rotated sorted array is actually number of rotations, like low will have left part min and
+right part of mid so how many times we will update our answer of minimum, we will update index with replaced index either
+low or mid.
 
 Find patterns in numbers when divided by X and Y and having X and Y as digits. Finding pattern will help us to solve fast.
 
@@ -81,3 +108,32 @@ MEX is minimum excluded value in array that is first excluded one
 
 
 Try to count pairs according to conditions either there is good array or beautiful array
+
+
+HCF:
+def hcf(a, b):
+    if(b == 0):
+        return a
+    else:
+        return hcf(b, a % b)
+
+Focus on parity of indexes while in sorted array to find single element like
+2,2,4,4,5,6,6 so here after 5 indexes will be (odd,even)
+
+Finding single element in sorted array.
+3,3,4,5,5
+6,6,7,8,8
+while left <=right:
+              mid = left + (right - left) //2
+              if nums[mid]!= nums[mid-1] and nums[mid]!= nums[mid+1]:
+                 return nums[mid]
+                 
+  # even odd
+              elif (mid&1 and nums[mid]== nums[mid-1]) or (mid+1&1 and nums[mid]== nums[mid+1]):
+                   left = mid + 1
+              else:  # odd even
+                   right = mid 
+        return -1
+              
+
+        
