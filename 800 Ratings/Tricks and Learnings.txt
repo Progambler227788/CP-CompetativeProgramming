@@ -20,6 +20,16 @@ Minimum number of days to make n boquets
 
 Keep this in mind -> while left<right: when right = mid, left = mid+1
 
+For finding elements in array <= k given in LOG(n)
+ l,r = 0,n
+    while l<r:
+          mid = l + (r-l) // 2
+          if arr[mid]<=k:
+              l = mid + 1
+          else:
+              r = mid 
+    return l
+
   
 
 By sorting we can compare first and last elements to check if array has same elements.
@@ -109,7 +119,6 @@ MEX is minimum excluded value in array that is first excluded one
 
 Try to count pairs according to conditions either there is good array or beautiful array
 
-
 HCF:
 def hcf(a, b):
     if(b == 0):
@@ -123,6 +132,7 @@ Focus on parity of indexes while in sorted array to find single element like
 Finding single element in sorted array.
 3,3,4,5,5
 6,6,7,8,8
+3,3,3,4,5,5
 while left <=right:
               mid = left + (right - left) //2
               if nums[mid]!= nums[mid-1] and nums[mid]!= nums[mid+1]:
@@ -135,5 +145,125 @@ while left <=right:
                    right = mid 
         return -1
               
+
+
+DFS:
+
+class Solution:
+    def countPathsWithXorValue(self, grid: List[List[int]], k: int) -> int:
+        m,n = len(grid),len(grid[0])
+        
+        @lru_cache(None)
+        def dfs(x,y,current):
+            if x==m-1 and y==n-1:
+               if current == k:
+                   return 1
+               return 0
+            paths = 0
+            if x+1<m:
+                paths += dfs(x+1,y, current ^ grid[x+1][y])
+            if y+1<n:
+                paths  += dfs(x,y+1, current ^ grid[x][y+1])
+            return paths % ( (10**9) + 7 )
+        
+        return dfs(0,0, grid[0][0])
+        ©leetcode
+
+
+For cycle counting like if it is a+b+c+a+b+c+a+b+c
+
+Step 1: Compute Total Work per Cycle
+The sum 
+𝑎
++
+𝑏
++
+𝑐
+a+b+c represents the total work completed in 3 days.
+
+Step 2: Calculate Complete Cycles
+The number of complete cycles that can fit within 
+𝑛
+n is calculated using:
+
+totalCycles
+=
+⌊
+𝑛
+totalSum
+⌋
+×
+3
+totalCycles=⌊ 
+totalSum
+n
+​
+ ⌋×3
+Here:
+
+𝑛
+/
+/
+totalSum
+n//totalSum: Gives the number of full cycles.
+Multiplying by 3 converts the number of cycles into the number of days.
+Step 3: Determine Remaining Work
+The remainder (
+𝑛
+%
+totalSum
+n%totalSum) determines the leftover work that does not fit into a complete cycle:
+
+If 
+𝑛
+%
+totalSum
+=
+=
+0
+n%totalSum==0: All work is covered by full cycles.
+If 
+𝑛
+%
+totalSum
+≤
+𝑎
+n%totalSum≤a: The remaining work is completed in the first day of the next cycle.
+If 
+𝑛
+%
+totalSum
+≤
+𝑎
++
+𝑏
+n%totalSum≤a+b: The remaining work is completed in the second day of the next cycle.
+Otherwise: The remaining work spills into the third day of the next cycle.
+
+
+for _ in range(int(input())):
+    n,a,b,c = map(int, input().split())
+    totalSum = (a+b+c)
+    # n // totalSum -> total cycles 
+    # 3 is total days so adding multiples of 3 
+    # 3 , 1 cycle == 3 days
+    # 3,  2 cycle == 6 days
+    # 3,  3 cycle == 9 days
+    totalCycles = n // totalSum * 3 # 
+    # if there is remainder than add days as well to accumalte
+    
+    # like i got 16 3 4 1,
+    # 16//8 is 2, and 16 % 8 is 0 so adding no days 
+    if n% totalSum == 0:
+        print(totalCycles)
+    elif n% totalSum <=a :
+        # if not divisble by 0 then add 1 day
+        print(totalCycles + 1)
+    elif n% totalSum <= a+b:
+        print(totalCycles + 2)
+        # else it will be one more cycle 
+    else:
+        print(totalCycles + 3)
+        
 
         
