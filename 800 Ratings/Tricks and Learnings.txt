@@ -1,3 +1,5 @@
+Use tuples when keys are repeated in python
+data.append((key,value))
 If we need to find pairs of K adjacent elements < X or either > X, then keep on counting element
   inside loop
    if condition:
