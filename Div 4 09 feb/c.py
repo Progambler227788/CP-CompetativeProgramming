@@ -11,16 +11,14 @@ for _ in range( int(input())):
     if not boolean:
        big , bigI = 0,0
        d[0] = min( d[0], p-d[0] )
-       for index in range( 0, n-1):
+       for index in range( 1, n):
            diff =  p - d[index]
-           if d[index] > d[index+1]:
-              d[index] = p - d[index]
+           if min(d[index],diff) >= d[index-1]:
+                 d[index] = min(d[index],diff)
+           elif max(d[index],diff) >=d[index-1]:
+                 d[index] = max(d[index],diff)
            else:
-              d[index] = min(diff,d[index])
-       
-       for i in range(n-1):
-           if d[i] > d[i+1]:
-               output = "NO"
-               break
+                 output = "NO"
+                 break
     print(output)
         
